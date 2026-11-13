@@ -242,7 +242,7 @@ test("testConnection lists one page and counts this provider's sandboxes; a refu
 	const tested = await host.testConnection({ timeoutMs: 1_000 });
 	assert.equal(tested.ok, true);
 	assert.match(tested.value.detail, /Render answered: 0 computers/);
-	const refused = new RenderProvider({ apiKey: "rnd_wrong", ownerId: OWNER, fetch: fakeRender().fetch }).host;
+	const refused = new RenderProvider({ apiKey: "fake-test-key", ownerId: OWNER, fetch: fakeRender().fetch }).host;
 	const result = await refused.testConnection({ timeoutMs: 1_000 });
 	assert.equal(result.ok, false);
 	assert.equal(result.error.code, "unauthorized");
