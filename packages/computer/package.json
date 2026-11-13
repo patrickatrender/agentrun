@@ -46,6 +46,10 @@
       "types": "./dist/e2b.d.ts",
       "default": "./dist/e2b.js"
     },
+    "./render": {
+      "types": "./dist/render.d.ts",
+      "default": "./dist/render.js"
+    },
     "./agent37": {
       "types": "./dist/agent37.d.ts",
       "default": "./dist/agent37.js"
